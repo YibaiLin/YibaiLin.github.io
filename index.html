@@ -194,6 +194,79 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/26/批量转换CSV格式到xlsx格式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yibai Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林一白的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/10/26/批量转换CSV格式到xlsx格式/" class="post-title-link" itemprop="url">批量转换CSV格式到xlsx格式</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-10-26 22:45:29 / Modified: 22:47:29" itemprop="dateCreated datePublished" datetime="2019-10-26T22:45:29+08:00">2019-10-26</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="批量转换CSV到xlsx"><a href="#批量转换CSV到xlsx" class="headerlink" title="批量转换CSV到xlsx"></a>批量转换CSV到xlsx</h4><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> 转换()</span><br><span class="line"></span><br><span class="line">Application.ScreenUpdating = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">pth = <span class="string">"C:\Users\linyibai\Desktop\source"</span> &amp; <span class="string">"\"</span></span><br><span class="line"></span><br><span class="line">flnm = Dir(pth &amp; <span class="string">"*.csv"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">Do</span> <span class="keyword">While</span> Len(flnm) &gt; <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">With</span> Workbooks.Open(pth &amp; flnm, <span class="keyword">ReadOnly</span>:=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">        .SaveAs Replace(<span class="string">"C:\Users\linyibai\Desktop\res2\"</span> &amp; flnm, <span class="string">".csv"</span>, <span class="string">""</span>), <span class="built_in">IIf</span>(Application.Version &gt;= <span class="number">12</span>, xlWorkbookDefault, xlWorkbookNormal)</span><br><span class="line"></span><br><span class="line">        .Close</span><br><span class="line"></span><br><span class="line">    <span class="keyword">End</span> <span class="keyword">With</span></span><br><span class="line"></span><br><span class="line">    flnm = Dir</span><br><span class="line"></span><br><span class="line"><span class="keyword">Loop</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/18/政府产业政策是有效的吗？/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -480,7 +553,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
